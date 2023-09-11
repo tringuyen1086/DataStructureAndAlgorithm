@@ -12,11 +12,12 @@ public class LinearSearch {
     }
 
     public static int linearSearch(String[] data, String value){
-        int position = 0;
-        while (position < data.length && !data[position].equals(value)){
-            position++;
+        for (int position = 0; position < data.length; position++){
+            if (data[position].equalsIgnoreCase(value)){
+                return position;
+            }
         }
-        return (position < data.length) ? position : -1;
+        return -1;
     }
     public static void main(String[] args) {
         /*

@@ -73,7 +73,6 @@ public class BinarySearch {
         String[] countries = {"AT", "AU", "DE", "ES", "FR", "HU", "IS", "JP", "KR", "PT","TW", "US"};
         String value = "";
 
-
         // initiate an array of length 10000
         int[] array = new int[10000];
 
@@ -94,7 +93,6 @@ public class BinarySearch {
                 int fountAtS = binarySearch(countries, value);
                 System.out.printf("%s found at index %d\n", value, fountAtS);
             }
-
         } while (!value.equals(""));
 
         // prompt loop for number searching
@@ -102,16 +100,12 @@ public class BinarySearch {
             System.out.print("Enter a number to search or 0 to exit: ");
             target = input.nextInt(); // input for number searching
 
-
             // conditional statement for number searching
             if (target != 0) {
                 int foundAtN = binarySearch(array, target);
                 System.out.printf("%d found at index %d \n", target, foundAtN);
             }
-
-
         } while (target != 0);
-
     }
 }
 

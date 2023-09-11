@@ -2,21 +2,48 @@ package tri.nguyen;
 
 import java.util.Scanner;
 public class BinarySearch {
-    private static int binarySearch(int[] array, int target){
+    private static int binarySearch(int[] data, int value){
         int low = 0;
-        int high = array.length -1;
+        int high = data.length -1;
 
-        while (low <= high){
-            int mid = low + (high - low)/2;
-            int currentMid = array[mid];
+        while (high >= low){
+            int mid = (high + low)/2;
 
-            System.out.println("mid: " + currentMid);
+            System.out.println("mid: " + data[mid]);
 
-            if (currentMid < target) low = mid + 1;
-            else if (currentMid > target) high = mid - 1;
-            else return mid; // target found
+            if (data[mid] == value){
+                return mid;
+            }
+            else if (data[mid] > value){
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
         }
-        return -1; // target not found
+        return -low -1;
+    }
+
+    private static int binarySearch(String[] data, String value){
+        int low = 0;
+        int high = data.length - 1;
+
+        while (high >= low){
+            int mid = (high + low)/2;
+
+            System.out.println("mid: " + data[mid]);
+
+            if (data[mid].equals(value)){
+                return mid;
+            }
+            else if (value.compareTo(data[mid]) < 0){
+                high = mid -1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+        return -low -1;
     }
 
     public static void main(String[] args) {
@@ -42,24 +69,49 @@ public class BinarySearch {
                                         * Recursive vs non-recursive implementation,
                                           which should be considered while designing as recursive takes stack space.
          */
+        Scanner input = new Scanner(System.in);
+        String[] countries = {"AT", "AU", "DE", "ES", "FR", "HU", "IS", "JP", "KR", "PT","TW", "US"};
+        String value = "";
+
+
+        // initiate an array of length 10000
         int[] array = new int[10000];
 
         // iterate to assign values from 0 to 9999 to the array
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
+        int target;
 
-        // ask for the target search
-        Scanner input = new Scanner(System.in);
-        int target = 0;
+        // prompt loop for string searching
+        do {
+            System.out.print("Enter a country code to search (not case sensitive) or Enter to exit: ");
+            value = input.nextLine(); // input for string searching
+            value = value.toUpperCase();
+
+            // conditional statement for string searching
+            if (!value.equals("")){
+                int fountAtS = binarySearch(countries, value);
+                System.out.printf("%s found at index %d\n", value, fountAtS);
+            }
+
+        } while (!value.equals(""));
+
+        // prompt loop for number searching
         do {
             System.out.print("Enter a number to search or 0 to exit: ");
-            target = input.nextInt();
+            target = input.nextInt(); // input for number searching
+
+
+            // conditional statement for number searching
             if (target != 0) {
-                int foundAt = binarySearch(array, target);
-                System.out.printf("%d found at index %d \n", target, foundAt);
+                int foundAtN = binarySearch(array, target);
+                System.out.printf("%d found at index %d \n", target, foundAtN);
             }
+
+
         } while (target != 0);
+
     }
 }
 

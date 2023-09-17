@@ -3,24 +3,26 @@ package tri.nguyen;
 import java.util.Queue;
 import java.util.LinkedList;
 public class QueueDS {
+
+    /*
+    Queue:       an interface
+                public interface Queue<E> extends java.util.Collection<E>
+                FIFO (First-In First-Out) data structure (ex. A line of people)
+                A collection designed for holding elements prior to processing
+                Linear data structure
+
+
+    Method:     insert (an item to the end of the Queue) = enqueue() , offer()
+                remove (an item from the head of the Queue) = dequeue() , poll()
+                examine = element() , peek()
+    Usage:
+                1. Keyboard buffer (letters should appear on the screen in the order they're pressed)
+                2. Printer Queue (Print jobs should be completed in order)
+                3. Used in LinkedLists, PriorityQueues, Breath-first search
+     */
+
     public static void main(String[] args){
-        /*
-            Queue:       an interface
-                        public interface Queue<E> extends java.util.Collection<E>
-                        FIFO (First-In First-Out) data structure (ex. A line of people)
-                        A collection designed for holding elements prior to processing
-                        Linear data structure
 
-
-            Method:     insert (an item to the end of the Queue) = enqueue() , offer()
-                        remove (an item from the head of the Queue) = dequeue() , poll()
-                        examine = element() , peek()
-            Usage:
-                        1. Keyboard buffer (letters should appear on the screen in the order they're pressed)
-                        2. Printer Queue (Print jobs should be completed in order)
-                        3. Used in LinkedLists, PriorityQueues, Breath-first search
-
-         */
 
         Queue<String> queue = new LinkedList<String>();
 
@@ -55,6 +57,5 @@ public class QueueDS {
         // search for an item in the queue
         System.out.println("\"Diamond\" in the queue? " + queue.contains("Diamond")); // does not give back the index of the search item
         System.out.println("\"Gold\" in the queue? " + queue.contains("Gold"));
-
     }
 }

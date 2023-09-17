@@ -1,19 +1,22 @@
 package tri.nguyen;
 
 public class DynamicArrayDS {
+
         /*
-            Dynamic Array:      Java = ArrayList; C++ = Vector; JavaScript = Array; Python = List
-            Pros:
-                                1. Random access of elements O(1)
-                                2. Good locality of reference and data cache utilization
-                                3. Easy to insert/delete at the end
-            Cons:
-                                1. Waste more memory
-                                2. Shifting elements is time-consuming O(n)
-                                3. Expanding/Shrinking the array is time-consuming O(n)
+        Dynamic Array:      Java = ArrayList; C++ = Vector; JavaScript = Array; Python = List
+        Pros:
+                            1. Random access of elements O(1)
+                            2. Good locality of reference and data cache utilization
+                            3. Easy to insert/delete at the end
+        Cons:
+                            1. Waste more memory
+                            2. Shifting elements is time-consuming O(n)
+                            3. Expanding/Shrinking the array is time-consuming O(n)
 
          */
+
         // initialize and set up constructors for the DynamicArrayDS class
+
         private int size;
         private int capacity = 10;
         private Object[] array;

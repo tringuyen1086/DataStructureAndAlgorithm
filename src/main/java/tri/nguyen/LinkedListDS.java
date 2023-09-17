@@ -3,47 +3,49 @@ package tri.nguyen;
 import java.util.LinkedList;
 
 public class LinkedListDS {
+
+    /*
+    LinkedList:     stores Nodes in 2 parts (data + address)
+                    Nodes are in non-consecutive memory locations
+                    Elements are linked using pointers
+                                    Singly Linked List
+                        Node                    Node                    Node
+                    [data | address] ->     [data | address] ->     [data | address]
+
+                                    Doubly Linked List
+                        Node                                            Node
+                    [address | data | address]      <->     [address | data | address]
+
+    Pros:
+                    1. Dynamic Data Structure (allocates needed memory while running)
+                    2. Insertion and Deletion of Nodes is easy. Time Complexity: O(1) === Constant Time
+                    3. No/Low memory
+    Cons:
+                    1. Greater memory usage (addition pointer)
+                    2. No random access of elements (no index [i])
+                    3. Accessing/searching elements is more time consuming. Time Complexity: O(n) === Linear
+
+    Method:         Insert      addFirst(e)
+                                offerFirst(e)
+                                addLast(e)
+                                offerLast(e)
+
+                    Remove      removeFirst()
+                                pollFirst()
+                                removeLast()
+                                pollLast()
+
+                    Examine     getFirst()
+                                peekFirst()
+                                getLast()
+                                peekLast()
+    Usage:
+                    1. Implement Stacks/Queues
+                    2. GPS navigation (application of Nodes for stop places and destinations)
+                    3. Music playlist
+     */
+
     public static void main(String[] args){
-        /*
-            LinkedList:     stores Nodes in 2 parts (data + address)
-                            Nodes are in non-consecutive memory locations
-                            Elements are linked using pointers
-                                            Singly Linked List
-                                Node                    Node                    Node
-                            [data | address] ->     [data | address] ->     [data | address]
-
-                                            Doubly Linked List
-                                Node                                            Node
-                            [address | data | address]      <->     [address | data | address]
-
-            Pros:
-                            1. Dynamic Data Structure (allocates needed memory while running)
-                            2. Insertion and Deletion of Nodes is easy. Time Complexity: O(1) === Constant Time
-                            3. No/Low memory
-            Cons:
-                            1. Greater memory usage (addition pointer)
-                            2. No random access of elements (no index [i])
-                            3. Accessing/searching elements is more time consuming. Time Complexity: O(n) === Linear
-
-            Method:         Insert      addFirst(e)
-                                        offerFirst(e)
-                                        addLast(e)
-                                        offerLast(e)
-
-                            Remove      removeFirst()
-                                        pollFirst()
-                                        removeLast()
-                                        pollLast()
-
-                            Examine     getFirst()
-                                        peekFirst()
-                                        getLast()
-                                        peekLast()
-            Usage:
-                            1. Implement Stacks/Queues
-                            2. GPS navigation (application of Nodes for stop places and destinations)
-                            3. Music playlist
-         */
 
         // LinkedList as Stack
         LinkedList<String> linkedListStack = new LinkedList<>();

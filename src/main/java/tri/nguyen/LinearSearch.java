@@ -3,6 +3,20 @@ package tri.nguyen;
 import java.util.Scanner;
 
 public class LinearSearch {
+
+    /*
+    Linear Search:          Iterate through a collection one element at a time
+
+    Runtime Complexity:     O(n)
+
+    Pros:
+                            1. Fast for searches of small to medium data sets
+                            2. Does not need to be sorted
+                            3. Useful for data structures that do not have random access (Linked List)
+    Cons:
+                            1. Slow for large data sets
+    */
+
     public static int linearSearch(int[] data, int value){
         int position = 0;
         while (position < data.length && data[position] != value){
@@ -20,18 +34,7 @@ public class LinearSearch {
         return -1;
     }
     public static void main(String[] args) {
-        /*
-            Linear Search:          Iterate through a collection one element at a time
 
-            Runtime Complexity:     O(n)
-
-            Pros:
-                                    1. Fast for searches of small to medium data sets
-                                    2. Does not need to be sorted
-                                    3. Useful for data structures that do not have random access (Linked List)
-            Cons:
-                                    1. Slow for large data sets
-         */
         Scanner input = new Scanner(System.in);
 
         String[] list = {"Apple", "Pi", "Zebra", "Zoo", "Magic"};

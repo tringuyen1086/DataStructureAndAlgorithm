@@ -6,15 +6,13 @@ import java.util.Queue;
 import java.util.PriorityQueue;
 
 public class PriorityQueueDS {
+    /*
+    Priority Queue:     A FIFO data structure
+                        that serves elements with the highest priorities first
+                        before elements with lower priority
+     */
     public static void main(String[] args){
-        /*
-            Priority Queue:     A FIFO data structure
-                                that serves elements with the highest priorities first
-                                before elements with lower priority
-            Method:
-            Usage:
 
-         */
 
         // LinkedList does not sort the order of the list
         Queue<Double> studentGPA1 = new LinkedList<>();

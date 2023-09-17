@@ -1,21 +1,25 @@
 package tri.nguyen;
+
 import java.util.Stack;
 
 public class StackDS {
-    public static void main(String[] args){
-        /*
-           stack:           LIFO (Last-In First-Out) data structure
-                            stores objects into a sort of "vertical tower"
-           Method:          insert = push() to add to the top
-                            remove = pop() to remove from the top
-                            examine = peek() to check the top without removing the top object
 
-           Usage of stack:
-                            1. Undo/redo features in text editors
-                            2. Moving back/forward through browser history
-                            3. backtracking algorithms (maze, file directories)
-                            4. Calling functions (call stack)
-         */
+    /*
+   stack:           LIFO (Last-In First-Out) data structure
+                    stores objects into a sort of "vertical tower"
+   Method:          insert = push() to add to the top
+                    remove = pop() to remove from the top
+                    examine = peek() to check the top without removing the top object
+
+   Usage of stack:
+                    1. Undo/redo features in text editors
+                    2. Moving back/forward through browser history
+                    3. backtracking algorithms (maze, file directories)
+                    4. Calling functions (call stack)
+    */
+
+    public static void main(String[] args){
+
 
         Stack<String> stack = new Stack<>();
 

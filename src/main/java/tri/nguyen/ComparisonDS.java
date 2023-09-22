@@ -4,6 +4,29 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class ComparisonDS {
+    /*
+    Runtime Complexity:     O(n log n) = quasilinear time
+                                * quicksort
+                                * mergesort
+                                * heapsort
+                            O(n^2) = quadratic time
+                                * insertion sort
+                                * selection sort
+                                * bubble short
+                                * mergesort
+
+    Space Complexity:       O(n) = linear space
+                                * Merge Sort
+
+                            O(log n) = logarithmic space
+                                * Quick Sort
+
+                            O(1) = constant space
+                                * Bubble Sort
+                                * Selection Sort
+                                *Insertion Sort
+     */
+
     public static void main(String[] args) {
         LinkedList<Integer> linkedList = new LinkedList<>();
         ArrayList<Integer> arrayList = new ArrayList<>();

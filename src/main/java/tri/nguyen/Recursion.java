@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Recursion {
 
     /*
-   Recursion:              occurs when the definition of a concept or process depends on a simpler version of itself.
+   Recursion:              When a thing is defined in terms of itself
+                           Occurs when the definition of a concept or process depends on a simpler version of itself.
                            [Wikipedia: https://en.wikipedia.org/wiki/Recursion]
 
                            Apply the result of a procedure to a procedure.
